@@ -4,6 +4,21 @@ Then in chrome browser: chrome://inspect
 To run it.
 
 1). npm install
-2). node app.js
+2). node app.js "New York"
 
+Git commands:
+
+To download it:
+git clone https://github.com/engp8691/weather-app
+npm install
+node app.js "New York"
+
+To commit/push codes to the repository
+git init
+git remote add origin https://github.com/engp8691/weather-app.git
+git clone https://github.com/engp8691/weather-app
+git add .
+git status
+git commit -m "for reviewing"
+git push -u origin master
 
