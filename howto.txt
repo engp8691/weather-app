@@ -1,0 +1,9 @@
+To debug it: node --inspect-brk=209.134.143.23 app.js
+Then in chrome browser: chrome://inspect
+
+To run it.
+
+1). npm install
+2). node app.js
+
+
