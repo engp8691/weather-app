@@ -1,14 +1,14 @@
-To debug it: node --inspect-brk=209.134.143.23 app.js
-Then in chrome browser: chrome://inspect
+To debug it: node --inspect-brk=your.ip.address.here app.js
+Then in chrome browser: chrome://inspect, but please add your.ip.address.here as new device for the first time
 
-To run it.
+To run this program.
 
 1). npm install
 2). node app.js "New York"
 
 Git commands:
 
-To download it:
+To download/clone it to your machine:
 git clone https://github.com/engp8691/weather-app
 npm install
 node app.js "New York"
