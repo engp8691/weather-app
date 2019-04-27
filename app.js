@@ -13,9 +13,10 @@ if (process.argv.length === 3){
 geocode(place, (err, data)=>{
 	if(err)  console.log('Err: ', err);
 	if(data){
-		forecast(data, (err, data)=>{
+		forecast(data, (err, data2)=>{
 			if(err)  console.log(err);
 			if(data) console.log(data);
+			if(data2) console.log(data2);
 		});
 	}
 });

@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="icon" href="/img/apple-touch-icon.png"></link>
+	<link rel='stylesheet' href='/css/styles.css'></link>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="main-content">
+		{{>header}}
+
+		<p> Use this web site for your weather</p>
+		<form id="searchform">
+			<input name="location" id="location" type="text" placeholder="location" />
+			<button>Search</button>
+			<span id="message_1"></span>
+			<span id="message_2"></span>
+			<span id="message_3"></span>
+		</form>
+	</div>
+
+	{{>footer}}
+
+	<script>
+		$("#searchform").submit(function(e){
+			$("#message_1").text("Loading ...");
+			$("#message_2").text("");
+			$("#message_3").text("");
+			e.preventDefault();
+			const location = $("#location").val();
+			console.log(location);
+
+			fetch("http://rtc.netbriefings.com:3000/weather?address="+location)
+				.then(response=>response.json())
+				.then((data)=>{
+					console.log(data);
+					if(data.err){
+						$("#message_1").text(data.err);
+					}else{
+						$("#message_1").text(data.data.location);
+						$("#message_2").text("Current temperature is " + Number(data.temperature).toFixed(0));
+						$("#message_3").text("Chance of rainning is " + (Number(data.precipProbability)*100).toFixed(0) + "%");
+					}
+				})
+		});
+	</script>
+</body>
+</html>
+
