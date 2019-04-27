@@ -39,7 +39,7 @@
 						$("#message_1").text(data.err);
 					}else{
 						$("#message_1").text(data.data.location);
-						$("#message_2").text("Current temperature is " + Number(data.temperature).toFixed(0));
+						$("#message_2").text("Current temperature is " + Number(data.temperature).toFixed(0)+"°F (" + Number((data.temperature-32)*5/9).toFixed(0) + "°C)");
 						$("#message_3").text("Chance of rainning is " + (Number(data.precipProbability)*100).toFixed(0) + "%");
 					}
 				})
