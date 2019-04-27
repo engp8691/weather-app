@@ -23,14 +23,14 @@ app.use(express.static(publicFolderPath));
 app.get('', (req, res)=>{
 	// send('Hello express!');
 	res.render('index', {
-		title: 'Weather Title',
+		title: 'Weather Application',
 		name: 'Yonglin'
 	});
 });
 
 app.get('/help', (req, res)=>{
 	res.render('help', {
-		title: 'I can help here',
+		title: 'Help pages',
 		name: 'Yonglin'
 	});
 });
@@ -45,7 +45,7 @@ app.get('/help/*', (req, res)=>{
 app.get('/about', (req, res)=>{
 	// res.send('I am express server!');
 	res.render('about', {
-		title: 'About me',
+		title: 'About weather application',
 		name: 'Yonglin'
 	});
 });
