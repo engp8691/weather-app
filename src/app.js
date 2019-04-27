@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode');
 const forecast= require('./utils/forecast');
 
 const app = express();
+# Heroku will use this to start the app
 const port = process.env.PORT || 3000;
 
 const viewsFolderPath = path.join(__dirname, '../templates/views');
