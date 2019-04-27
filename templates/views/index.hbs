@@ -31,7 +31,7 @@
 			const location = $("#location").val();
 			console.log(location);
 
-			fetch("http://rtc.netbriefings.com:3000/weather?address="+location)
+			fetch("/weather?address="+location)
 				.then(response=>response.json())
 				.then((data)=>{
 					console.log(data);
