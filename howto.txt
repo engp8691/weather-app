@@ -22,3 +22,12 @@ git status
 git commit -m "for reviewing"
 git push -u origin master
 
+
+
+ssh -T git@github.com
+git remote set-url origin git@github.com:engp8691/weather-app.git
+git status
+git add .
+git commit -m "Deploy to Heroku"
+git push
+
